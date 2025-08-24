@@ -1,0 +1,37 @@
+/*package whatever //do not write package name here */
+
+import java.io.*;
+
+
+
+class GFG {
+    
+    public static int facto(int n){ // Method 1 - return 
+        
+        if(n==1|| n==0)
+            return 1;
+        
+        return n*facto(n-1);
+        
+    }
+    
+    public static void factonew(int n, int mul){ // Method 2- printing in the function
+        
+        if(n==1){
+            //mul*=1;
+            System.out.println(mul);
+            return;
+        }
+        
+        mul*=n;
+        factonew(n-1, mul);
+        
+        
+    }
+    
+	public static void main (String[] args) {
+	
+	        System.out.println(facto(5)); // Method 1
+	        factonew(5,1); // Method 2
+	}
+}

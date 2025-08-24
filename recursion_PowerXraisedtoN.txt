@@ -1,0 +1,37 @@
+/*package whatever //do not write package name here */
+
+import java.io.*;
+
+class GFG {
+    
+    public static int Power(int x, int n){ // Method 1:- Stack height= n
+        if(n==1)
+            return x;
+        if(n==0)
+            return 1;
+        
+        return x*Power(x, n-1);
+    }
+    
+    public static int power(int x, int n)   // Method 2:- Stack height=log(n)
+    {
+        if(n==0)
+            return 1;
+        if(x==0)
+            return 0;
+        
+        if(n%2==0)
+            return (power(x,n/2)*power(x,n/2));
+        else
+            return (power(x,n/2)*power(x,n/2)*x);
+        
+        
+    }
+    
+	public static void main (String[] args) {
+	    
+	    System.out.println(Power(2,5)); // Method 1
+	    System.out.println(power(2,5)); // Method 2
+		
+	}
+}

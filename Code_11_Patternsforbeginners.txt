@@ -1,0 +1,189 @@
+1) 
+* * * * * 
+* * * * * 
+* * * * * 
+* * * * * 
+
+My solution:-
+for(int i=0; i<4; i++){
+            for(int j=0; j<5; j++){
+                System.out.print("* ");
+            }
+            System.out.println();
+  }
+
+2) 
+*****
+*   *
+*   *
+*****
+
+My solution:-
+ for(int i=0; i<4; i++){
+        for(int j=0; j<5; j++){
+                if(i==0||i==3)
+                    System.out.print("*");
+                else{
+                    if(j==0||j==4){
+                        System.out.print("*");
+                    }
+                    else{
+                        System.out.print(" ");
+                     }
+                  }
+         }
+            System.out.println();
+   }
+
+
+Better solution-
+
+public class Main{
+    public static void main(String[] args){
+        for(int i=0; i<4; i++){
+            for(int j=0; j<5; j++){
+                if(i==0|| i==3 || j==0 || j==4)
+                    System.out.print("*");
+                else
+                    System.out.print(" ");
+            }
+             System.out.println();
+        }
+        
+    }
+    
+}
+
+3) 
+*
+**
+***
+****
+
+My solution:-
+for(int i=0; i<4; i++){
+            for(int j=0; j<=i; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+     }
+
+4) 
+****
+***
+**
+*
+
+My solution:-
+for(int i=0; i<=3; i++){
+            for(int j=0; j<=3-i; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+
+5)
+ 
+   *
+  **
+ ***
+****
+
+My solution:-
+int limit=3;
+        for(int i=0; i<=3; i++){
+            for(int j=0; j<=3; j++){
+                if(j>=limit)
+                    System.out.print("*");
+                else
+                    System.out.print(" ");
+            }
+            limit-=1;
+            System.out.println();
+        }
+
+6)
+1
+12
+123
+1234
+12345
+
+My solution:-
+for(int i=1; i<=5; i++){
+	for(int j=1; j<=i; j++){
+	        System.out.print(j);
+	    }
+	System.out.println();
+    }
+
+7) 
+12345
+1234
+123
+12
+1
+
+My solution:-
+int limit=5;
+for(int i=1; i<=5; i++){
+	for(int j=1; j<=limit; j++){
+	        System.out.print(j);
+	    }
+	System.out.println();
+	limit--;
+ }
+
+8) 
+1 
+2 3 
+4 5 6 
+7 8 9 10 
+11 12 13 14 15 
+
+My solution:-
+int count=1;
+for(int i=0; i<=4; i++){
+	for(int j=0; j<=i; j++){
+	        System.out.print(count+" ");
+	        count++;
+	    }
+    System.out.println();
+    }
+
+9) 
+1 
+0 1 
+0 1 0 
+1 0 1 0 
+1 0 1 0 1 
+
+My solution:-
+	boolean count=true;
+	int value;
+	for(int i=0; i<=4; i++){
+	    for(int j=0; j<=i; j++){
+	        value=count?1:0;
+	        System.out.print(value+" ");
+	        count=!count;
+	    }
+	    System.out.println();
+	}
+		
+Better solution-
+
+ int n = 5;
+ 
+for(int i=1; i<=n; i++) {
+       for(int j=1; j<=i; j++) {
+               if((i+j) % 2 == 0) {
+                   System.out.print(1+" ");
+               } else {
+                   System.out.print(0+" ");
+               }
+           }
+      System.out.println();
+    }
+
+	

@@ -1,0 +1,28 @@
+/*package whatever //do not write package name here */
+
+import java.io.*;
+
+class GFG {
+    
+    public static void fibona(int a, int b, int CountTerms){
+        
+        if(CountTerms==0)
+            return;
+        int c=a+b;
+        System.out.print(c+" ");
+        fibona(b, c, CountTerms-1);
+    }
+    
+	public static void main (String[] args) {
+		//System.out.println("GfG!");
+		// fibo sequence, recursion
+	   // 0, 1, 1, 2,...
+	   
+	   // Print first 5 terms of fibonacci sequence
+	   System.out.print(0+" "+1+" ");
+	   // 2 terms are printed. 3 remaining
+	   fibona(0,1,3);
+	   
+	   
+	}
+}

@@ -1,0 +1,136 @@
+/*package whatever //do not write package name here */
+
+import java.io.*;
+
+class Animal{
+    public void walk(){
+        System.out.println("Animal is walking");
+    }
+}
+
+
+class Giraffe extends Animal {
+    public void walk(){
+        System.out.println("Giraffe is walking");
+    }
+	public static void main (String[] args) {
+	//	System.out.println("GfG!");
+	
+	// diamond
+	// square 
+	// inheritance
+	
+// 	  *
+// 	 * *
+// 	*   *
+// 	*   *
+// 	 * *
+// 	  *
+
+//          spaces in between
+//        *      0
+//       * *     1
+//      * * *    3
+//     * * * *	 5 
+//    * * * * *  7 
+ 
+ 
+ 
+ 
+ 
+   
+   // for upper half of  diamond
+   int rows=5;
+   int spaces=rows-1;
+   
+   for(int i=1; i<=spaces; i++)
+        System.out.print(" ");  // spaces for first row
+        
+   System.out.print("*");
+   System.out.println();
+   spaces--; // starting from 2nd row
+   
+   int betSpaces=1; // spaces in between the stars
+   
+   for(int i=2; i<=rows; i++){
+       
+       for(int j=spaces; j>=1; j--){  // loop of spaces before the stars
+           System.out.print(" ");
+       }
+       spaces--;
+       
+       System.out.print("*");
+       for(int k=1; k<=betSpaces; k++){ // loop of spaces in between the stars
+           System.out.print(" ");
+       }
+       betSpaces+=2;
+       
+       System.out.print("*");
+       
+       System.out.println();
+       
+   }
+   
+   betSpaces-=2;
+  
+  //System.out.println();
+   
+   // for lower half of diamond
+   
+   
+   for(int i=0; i<=rows-2; i++){ // don't want the last row of lower half, since I've written the separate code for it
+       for(int j=1; j<=i; j++){
+           System.out.print(" ");
+       }
+       System.out.print("*");
+       for(int k=1; k<=betSpaces; k++){
+           System.out.print(" ");
+       }
+       betSpaces-=2;
+       System.out.print("*");
+       System.out.println();
+   }
+   
+   int s= rows-1;
+    for(int i=1; i<=s; i++)
+        System.out.print(" ");  // spaces for last row
+   
+    System.out.print("*");
+   
+   System.out.println();
+   
+  // _________________________________________________________________________________ 
+   
+   // square star pattern
+   
+//   * * * *
+//   *     *
+//   *     *
+//   * * * *
+
+    int length=4;
+    for(int i=1; i<=length; i++)
+        System.out.print("* ");
+    System.out.println();
+    
+    for(int i=1; i<=length-2;i++){
+        System.out.print("*");
+        for(int j=1; j<=(length*2)-3;j++)
+            System.out.print(" "); 
+        
+        System.out.print("*");
+        
+        System.out.println();
+    }
+    
+  // (length*2)-3  => length*2 subtracted by star at the beginning and at the end and there are 7 spaces in between if there're 8 characters  
+    for(int i=1; i<=length; i++)
+        System.out.print("* ");
+        
+       System.out.println();
+       Giraffe g= new Giraffe();
+       g.walk();
+        
+        
+	}
+}
