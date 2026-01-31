@@ -1,0 +1,2 @@
+Schaeffler Chatbot is an advanced AI model based on OpenAI's powerful GPT architecture.
+Schaeffler Chatbot can answer a wide range of questions, solve problems, provide information and even hold conversations.
